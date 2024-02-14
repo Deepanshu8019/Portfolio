@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Deepanshu Shuka</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="res_style.css">
 
   <link rel="shortcut icon" href="images\userAsset\Favicon.ico" type="image/x-icon">
 
@@ -18,6 +19,12 @@
 
     <div class="container">
       <div class="navbar">
+
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
 
         <div class="logo-container" id="home">
           <img src="./images/userAsset/NavLogo.jpg" class="logo">
@@ -36,7 +43,7 @@
 
       <div class="hero-section">
         <div class="hero-section-left">
-          <div class="hero-section-heading">Hi! My Name is <br>
+          <div class="hero-section-heading hero-section-heading-res">Hi! My Name is <br>
             <div class="name">Deepanshu Shukla</div>
           </div>
 
@@ -59,16 +66,16 @@
           <div class="absolute icons icon-dots">
             <img src="./images/userAsset/dots.png" alt="" />
           </div>
-          <div class="absolute icons icon-cube">
+          <div class="absolute icons icon-cube absolute-res ">
             <img src="./images/userAsset/cube.png" alt="" />
           </div>
-          <div class="absolute icons icon-circle">
+          <div class="absolute icons icon-circle absolute-res ">
             <img src="./images/userAsset/circle.png" alt="" />
           </div>
-          <div class="absolute icons icon-zigzag">
+          <div class="absolute icons icon-zigzag absolute-res ">
             <img src="./images/userAsset/zigzags.png" alt="" />
           </div>
-          <div class="absolute icons icon-plus">
+          <div class="absolute icons icon-plus absolute-res ">
             <img src="./images/userAsset/plus.png" alt="" />
           </div>
           <div class="user-image">
@@ -103,7 +110,7 @@
 
             <h2 class="project-heading">Razorpay Clone</h2>
 
-            <p class="project-subHeading">
+            <p class="project-subHeading project-sub-heading">
               Built a web application that closely mimicked the design of the popular Indian payment gateway, Razor Pay,
               using HTML & Tailwind CSS.
             </p>
@@ -152,9 +159,9 @@
           </div>
         </div>
 
-        <div class="project-card" id="project3">
-          <div class="project-number project-number-right">03</div>
-          <div class="project-content project-content-left">
+        <div class="project-card " id="project3">
+          <div class="project-number ">03</div>
+          <div class="project-content project-number-left-2">
             <div class="project-skill-container">
               <img class="project-skill" src="./images/stack/HTML.png" alt="" />
               <img class="project-skill" src="./images/stack/CSS.png" alt="" />
@@ -165,7 +172,7 @@
               <!-- <img class="project-skill" src="./images/stack/Vercel.svg" alt="" /> -->
             </div>
 
-            <h2 class="project-heading">Password Generator</h2>
+            <h2 class="project-heading project-heading-left-2">Password Generator</h2>
             <p class="project-sub-heading">
               Designed and developed a web application that generates random passwords based on user preferences. The
               app allows users
@@ -217,7 +224,7 @@
     </div>
 
     <div id="skills" class="container skills-container ">
-      <div class="skill-fade-text">Skills</div>
+      
 
       <div class="skill-container-left">
         <h2 class="skill-heading">
@@ -269,8 +276,8 @@
         <img src="./images/stack/K8s.svg" alt="" class="skills-logo" />
         <img src="./images/stack/netlify.svg" alt="" class="skills-logo" />
       </div>
-
-
+      
+      <div class="skill-fade-text">Skills</div>
 
     </div>
 
@@ -313,11 +320,11 @@
     </div>
 
     <footer>
-      <div class="container">
+      <div class="container ">
         <div class="footer-wrapper">
           <div class="footer-faded-text">Deepanshu Shukla</div>
 
-          <div class="link-wrapper">
+          <div class="link-wrapper link-wrapper-res">
             <div>
               <a href="#home">Home</a>
             </div>
@@ -365,6 +372,14 @@
       backSpeed: 80,
       backDelay: 1000,
     });
+
+    var burger = document.querySelector('.burger');
+    var navbar = document.querySelector('.navbar');
+    
+    burger.addEventListener('click', () => {
+      navbar.style.height = navbar.style.height === '270px' ? '60px' : '270px';
+    });
+
   </script>
 </body>
 
