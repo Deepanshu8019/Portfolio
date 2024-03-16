@@ -41,7 +41,7 @@
         width: 100%;
         position: relative;
         transition: all ease .7s;
-        height: 60px;
+        height: 50px;
         overflow: hidden;
         justify-content: center;
     }
