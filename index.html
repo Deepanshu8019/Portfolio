@@ -26,51 +26,29 @@
           <div class="line"></div>
           <div class="line"></div>
         </div> -->
-        
+
         <div class="hamburger-menu">
           <input id="menu__toggle" type="checkbox" />
           <label class="menu__btn" for="menu__toggle">
             <span></span>
           </label>
-          
-          <ul class="menu__box">
+
+          <ul class="menu__box nav-wrapper">
             <li><a class="menu__item" href="#home">Home</a></li>
             <li><a class="menu__item" href="#skills">About</a></li>
-            <li><a class="menu__item" href="#projects">Projects</a></li>
             <li><a class="menu__item" href="#skills">Skills</a></li>
+            <li><a class="menu__item" href="#projects">Projects</a></li>
             <li><a class="menu__item" href="#contactme">Contact Me</a></li>
           </ul>
         </div>
-
-        <!-- <div>
-          <input id="toggle" type="checkbox"></input>
-          <label for="toggle" class="hamburger">
-            <div class="top-bun"></div>
-            <div class="meat"></div>
-            <div class="bottom-bun"></div>
-          </label>
-
-          <div class="nav">
-            <div class="nav-wrapper">
-              <nav>
-                <div><a href="#home">Home</a></div>
-                <div><a href="#skills">About</a></div>
-                <div><a href="#projects">Projects</a></div>
-                <div><a href="#skills">Skills</a></div>
-                <div><a href="#contactme">Contact Me</a></div>
-              </nav>
-            </div>
-          </div>
-        </div> -->
 
         <div class="logo-container" id="home">
           <img src="./images/userAsset/NavLogo.jpg" class="logo">
           <div class="logo-text">ortfoLio.</div>
         </div>
-        
+
         <div class="nav-items">
           <div><a href="#home">Home</a></div>
-          <div><a href="#skills">About</a></div>
           <div><a href="#projects">Projects</a></div>
           <div><a href="#skills">Skills</a></div>
           <div><a href="#contactme">Contact Me</a></div>
@@ -284,11 +262,6 @@
             As a tech enthusiast, I'm currently exploring in Software Development, Full Stack Development & pursuing
             𝐁.𝐓𝐞𝐜𝐡 from Shri Ram Institute of Science & technologies and love exploring new technologies.
           </p>
-          <!-- <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quidem
-                quos ullam veritatis voluptates tenetur qui ipsa nulla culpa itaque?
-              </p> -->
-
         </div>
       </div>
 
@@ -417,12 +390,42 @@
       backDelay: 1000,
     });
 
-    var burger = document.querySelector('.burger');
-    var navbar = document.querySelector('.navbar');
+    // var burger = document.querySelector('.burger');
+    // var navbar = document.querySelector('.navbar');
 
-    burger.addEventListener('click', () => {
-      navbar.style.height = navbar.style.height === '270px' ? '60px' : '270px';
+    // burger.addEventListener('click', () => {
+    //   navbar.style.height = navbar.style.height === '270px' ? '60px' : '270px';
+    // });
+
+    function adjustCheckboxInput() {
+      var screenSize = window.innerWidth; // Get the width of the screen
+      var menuToggle = document.getElementById('menu__toggle'); // Get the checkbox input element
+
+      if (screenSize > 1200) {
+        // Screen size greater than 1200px
+        if (menuToggle) {
+          menuToggle.remove(); // Remove checkbox input
+        }
+      } else {
+        // Screen size less than or equal to 1200px
+        var hamburgerMenu = document.querySelector('.hamburger-menu');
+        if (hamburgerMenu && !menuToggle) {
+          var inputCheckbox = document.createElement('input');
+          inputCheckbox.setAttribute('id', 'menu__toggle');
+          inputCheckbox.setAttribute('type', 'checkbox');
+          hamburgerMenu.insertBefore(inputCheckbox, hamburgerMenu.firstChild); // Insert checkbox input as the first child of hamburgerMenu
+        }
+      }
+    }
+
+    // Initial call to adjustCheckboxInput when the page loads
+    adjustCheckboxInput();
+
+    // Event listener for window resize to dynamically adjust the checkbox input
+    window.addEventListener('resize', function () {
+      adjustCheckboxInput();
     });
+
 
   </script>
 </body>

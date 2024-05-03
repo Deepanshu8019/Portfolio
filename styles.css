@@ -53,11 +53,11 @@
   padding: 0 4em;
 }
 
-#toggle{
+#toggle {
   display: none;
 }
 
-.nav-wrapper{
+.nav-wrapper {
   display: none;
 }
 
@@ -318,7 +318,7 @@ a {
 .icon-plus {
   z-index: 9;
   top: -0.8rem;
-    left: 50%;
+  left: 50%;
   animation: shakeEffectPlus 5s ease-in infinite;
 }
 
