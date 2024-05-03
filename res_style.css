@@ -25,6 +25,7 @@ element.style {
 
     .container {
         width: 100%;
+        justify-content: center;
     }
 
     .logo-container {
@@ -333,7 +334,7 @@ element.style {
     }
 
     .footer-wrapper {
-        width: 100%;
+        /* width: 100%; */
         height: 4.5rem;
         gap: 1rem;
         padding: 0.5rem;
@@ -358,20 +359,27 @@ element.style {
         display: none;
     }
 
+    .footer-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .icon-wrapper {
         margin-bottom: 2rem;
         display: flex;
         align-items: center;
         margin-left: 5rem;
         margin-right: 5rem;
-        width: 100%;
+        /* width: 100%; */
         justify-content: space-around;
     }
 }
 
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
 
     .container {
         justify-content: center;
     }
-}
+} */
