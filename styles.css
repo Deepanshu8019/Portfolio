@@ -53,6 +53,14 @@
   padding: 0 4em;
 }
 
+#toggle{
+  display: none;
+}
+
+.nav-wrapper{
+  display: none;
+}
+
 .nav-items div {
   font-size: 20px;
   font-weight: 500;
@@ -164,6 +172,7 @@ a {
 
 .hero-section-right {
   position: relative;
+  z-index: -10;
 }
 
 .absolute {
@@ -173,16 +182,36 @@ a {
 .user-image {
   padding: 2.5rem;
   /* filter:grayscale(1); */
-
+  object-fit: cover;
   transition: all 1s;
+  display: flex;
+  width: 350px;
+  height: 600px;
+  justify-content: center;
+  align-items: center;
   animation: scaleImage 5s linear infinite;
 }
 
-.user-image img {
-  height: 480px;
-  width: 480px;
+/* .user_image_div{
+  display: block;
+} */
+
+
+/* .user-image img {
+  width: 600px;
+  height: 800px;
   z-index: -9;
+  scale: 0.6;
   object-fit: cover;
+} */
+
+.user-image img {
+  width: 37rem;
+  height: 1000px;
+  z-index: -9;
+  scale: 0.6;
+  object-fit: cover;
+  object-position: center;
 }
 
 @keyframes scaleImage {
@@ -232,8 +261,8 @@ a {
 
 .icon-cube {
   z-index: 9;
-  top: -0.8em;
-  right: 1em;
+  top: 0.2em;
+  right: 2em;
   animation-name: cubeRotate;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -281,22 +310,22 @@ a {
 
 @keyframes zigzagAnimation {
   50% {
-    left: 5%;
-    top: 2%;
+    left: 10%;
+    top: 8%;
   }
 }
 
 .icon-plus {
   z-index: 9;
   top: -0.8rem;
-  left: 50%;
+    left: 50%;
   animation: shakeEffectPlus 5s ease-in infinite;
 }
 
 @keyframes shakeEffectPlus {
   50% {
     top: 3%;
-    left: 48%
+    left: 48%;
   }
 }
 

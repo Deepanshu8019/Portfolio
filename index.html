@@ -8,6 +8,7 @@
   <title>Deepanshu Shuka</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="res_style.css">
+  <link rel="stylesheet" href="hambarger.css">
 
   <link rel="shortcut icon" href="images\userAsset\Favicon.ico" type="image/x-icon">
 
@@ -20,17 +21,53 @@
     <div class="container">
       <div class="navbar">
 
-        <div class="burger">
+        <!-- <div class="burger">
           <div class="line"></div>
           <div class="line"></div>
           <div class="line"></div>
+        </div> -->
+        
+        <div class="hamburger-menu">
+          <input id="menu__toggle" type="checkbox" />
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+          </label>
+          
+          <ul class="menu__box">
+            <li><a class="menu__item" href="#home">Home</a></li>
+            <li><a class="menu__item" href="#skills">About</a></li>
+            <li><a class="menu__item" href="#projects">Projects</a></li>
+            <li><a class="menu__item" href="#skills">Skills</a></li>
+            <li><a class="menu__item" href="#contactme">Contact Me</a></li>
+          </ul>
         </div>
+
+        <!-- <div>
+          <input id="toggle" type="checkbox"></input>
+          <label for="toggle" class="hamburger">
+            <div class="top-bun"></div>
+            <div class="meat"></div>
+            <div class="bottom-bun"></div>
+          </label>
+
+          <div class="nav">
+            <div class="nav-wrapper">
+              <nav>
+                <div><a href="#home">Home</a></div>
+                <div><a href="#skills">About</a></div>
+                <div><a href="#projects">Projects</a></div>
+                <div><a href="#skills">Skills</a></div>
+                <div><a href="#contactme">Contact Me</a></div>
+              </nav>
+            </div>
+          </div>
+        </div> -->
 
         <div class="logo-container" id="home">
           <img src="./images/userAsset/NavLogo.jpg" class="logo">
           <div class="logo-text">ortfoLio.</div>
         </div>
-
+        
         <div class="nav-items">
           <div><a href="#home">Home</a></div>
           <div><a href="#skills">About</a></div>
@@ -56,31 +93,35 @@
             learn about my journey.
           </div>
 
-          <a href="#">
+          <a href="mailto: deepanshushukla9585@gmail.com">
             <div class="btn-pink" id="btn">Hire Me</div>
           </a>
 
         </div>
 
         <div class="hero-section-right">
-          <div class="absolute icons icon-dots">
-            <img src="./images/userAsset/dots.png" alt="" />
+          <div class="user_image_div">
+            <div class="absolute icons icon-dots">
+              <img src="./images/userAsset/dots.png" alt="" />
+            </div>
+            <div class="absolute icons icon-cube absolute-res ">
+              <img src="./images/userAsset/cube.png" alt="" />
+            </div>
+            <div class="absolute icons icon-circle absolute-res ">
+              <img src="./images/userAsset/circle.png" alt="" />
+            </div>
+            <div class="absolute icons icon-zigzag absolute-res ">
+              <img src="./images/userAsset/zigzags.png" alt="" />
+            </div>
+            <div class="absolute icons icon-plus absolute-res ">
+              <img src="./images/userAsset/plus.png" alt="" />
+            </div>
+
+            <div class="user-image">
+              <img src="./images/userAsset/UserImage.jpg" alt="" />
+            </div>
           </div>
-          <div class="absolute icons icon-cube absolute-res ">
-            <img src="./images/userAsset/cube.png" alt="" />
-          </div>
-          <div class="absolute icons icon-circle absolute-res ">
-            <img src="./images/userAsset/circle.png" alt="" />
-          </div>
-          <div class="absolute icons icon-zigzag absolute-res ">
-            <img src="./images/userAsset/zigzags.png" alt="" />
-          </div>
-          <div class="absolute icons icon-plus absolute-res ">
-            <img src="./images/userAsset/plus.png" alt="" />
-          </div>
-          <div class="user-image">
-            <img src="./images/userAsset/UserImage.jpg" alt="" />
-          </div>
+
         </div>
 
       </div>
@@ -224,7 +265,7 @@
     </div>
 
     <div id="skills" class="container skills-container ">
-      
+
 
       <div class="skill-container-left">
         <h2 class="skill-heading">
@@ -276,7 +317,7 @@
         <img src="./images/stack/K8s.svg" alt="" class="skills-logo" />
         <img src="./images/stack/netlify.svg" alt="" class="skills-logo" />
       </div>
-      
+
       <div class="skill-fade-text">Skills</div>
 
     </div>
@@ -343,11 +384,14 @@
           </div>
 
           <div class="icon-wrapper">
-            <a href="#" target="_blank"><i class="fa-brands fa-linkedin icon"></i></a>
-            <a href="#" target="_blank"><i class="fa-brands fa-github icon"></i></a>
+            <a href="https://www.linkedin.com/in/deepanshu8019/" target="_blank"><i
+                class="fa-brands fa-linkedin icon"></i></a>
+            <a href="https://github.com/Deepanshu8019" target="_blank"><i class="fa-brands fa-github icon"></i></a>
             <a href="#" target="_blank"><i class="fa-brands fa-twitter icon"></i></a>
-            <a href="#" target="_blank"><i class="fa-brands fa-instagram icon"></i></a>
-            <a href="mailto: jainakshat0100@gmail.com" target="_blank"><i class="fa-regular fa-envelope icon"></i></a>
+            <a href="https://www.instagram.com/deepanshu_shukla_8019?igsh=MTBwcnZqeXM1emRhcg==" target="_blank"><i
+                class="fa-brands fa-instagram icon"></i></a>
+            <a href="mailto: deepanshushukla9585@gmail.com" target="_blank"><i
+                class="fa-regular fa-envelope icon"></i></a>
           </div>
 
         </div>
@@ -376,12 +420,7 @@
     var burger = document.querySelector('.burger');
     var navbar = document.querySelector('.navbar');
 
-    // navItems.style.display = navItems.style.display === 'flex' ? 'none' : 'flex';
-
     burger.addEventListener('click', () => {
-      // navbar.classList.toggle('navbarRes');
-      // navItems.classList.toggle('nav-items-res');
-      // navbarRes.classList.toggle('navbar');
       navbar.style.height = navbar.style.height === '270px' ? '60px' : '270px';
     });
 
