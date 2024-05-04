@@ -6,9 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Deepanshu Shuka</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="res_style.css">
-  <link rel="stylesheet" href="hambarger.css">
+  <link rel="stylesheet" href="./Style/styles.css">
+  <link rel="stylesheet" href="./Style/res_style.css">
+  <link rel="stylesheet" href="./Style/hambarger.css">
+  <link rel="stylesheet" href="./Style/Toaster.css">
 
   <link rel="shortcut icon" href="images\userAsset\Favicon.ico" type="image/x-icon">
 
@@ -20,12 +21,6 @@
 
     <div class="container">
       <div class="navbar">
-
-        <!-- <div class="burger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div> -->
 
         <div class="hamburger-menu">
           <input id="menu__toggle" type="checkbox" />
@@ -72,9 +67,18 @@
             learn about my journey.
           </div>
 
-          <a href="mailto: deepanshushukla9585@gmail.com">
-            <div class="btn-pink" id="btn">Hire Me</div>
-          </a>
+          <div class="btn-top">
+            <div class="btn-pink">
+              <a class="hire-Me-btn" href="mailto: deepanshushukla9585@gmail.com">
+                Hire Me
+              </a>
+            </div>
+
+            <div class="btn-pink cv-button">
+              <a href="./images/userAsset/Resume.pdf" download>Get CV</a>
+            </div>
+          </div>
+
 
         </div>
 
@@ -305,28 +309,29 @@
           Questions, thoughts, or just want to say hello?
         </h3>
 
-
         <div class="contactus-form-container">
-          <form class="form" action="">
+          <form class="form" return="false">
             <div class="formfield-container">
-              <input class="formfield" type="text" name="name" id="" placeholder="Enter your name" />
+              <input class="formfield" type="text" name="name" id="Name" placeholder="Enter your name"
+                required="true" />
 
-              <input class="formfield" type="email" name="email" id="" placeholder="Enter your email address" />
+              <input class="formfield" type="email" name="email" id="Email" placeholder="Enter your email address"
+                required="true" />
 
-              <input class="formfield" type="text" name="subject" id="" placeholder="Enter your subject" />
+              <input class="formfield" type="text" name="subject" id="Subject" placeholder="Enter your subject" />
 
-              <textarea name="message" id="" cols="30" rows="10" class="formfield formfield-textarea"
+              <textarea name="message" id="Message" cols="30" rows="10" class="formfield formfield-textarea"
                 placeholder="Enter your message"></textarea>
-
             </div>
 
-            <div>
-              <button type="submit" class="btn-pink" id="submit-btn">
+            <ul class="notifications"></ul>
+            <div class="buttons">
+              <button type="submit" class="btn">
                 Send Message<i class="submit-icon fa-solid fa-paper-plane"></i>
               </button>
             </div>
-
           </form>
+
 
         </div>
 
@@ -375,13 +380,15 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+  <script src="./Script/Toaster.js" defer></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script>
     var typeData = new Typed(".role", {
       strings: [
         "Coder",
+        "MERN Stack Deceloper",
         "Software Developer",
         "Full Stack Developer",
-        "Web Developer",
         "UI-UX Designer",
         "Backend Developer",
       ],
@@ -390,13 +397,6 @@
       backSpeed: 80,
       backDelay: 1000,
     });
-
-    // var burger = document.querySelector('.burger');
-    // var navbar = document.querySelector('.navbar');
-
-    // burger.addEventListener('click', () => {
-    //   navbar.style.height = navbar.style.height === '270px' ? '60px' : '270px';
-    // });
 
     function adjustCheckboxInput() {
       var screenSize = window.innerWidth; // Get the width of the screen

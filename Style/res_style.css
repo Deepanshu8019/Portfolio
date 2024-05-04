@@ -305,9 +305,15 @@ element.style {
         margin-bottom: 4rem;
     }
 
+    .btn-top{
+        gap: 6rem;
+        width: 17rem;
+
+    }
+
     .btn-pink {
-        width: fit-content;
-        padding: 0.6rem 1.5rem;
+        width: 3rem;
+        padding: 0.5rem 1rem;
         font-size: 10px;
         font-weight: 500;
         margin-top: 1rem;
