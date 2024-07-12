@@ -24,17 +24,17 @@
 
         <div class="hamburger-menu">
           <input id="menu__toggle" type="checkbox" />
-          <label class="menu__btn" for="menu__toggle">
+          <label class="menu__btn" for="menu__toggle" autocomplete="off">
             <span></span>
           </label>
 
-          <ul class="menu__box nav-wrapper">
-            <li><a class="menu__item" href="#home">Home</a></li>
-            <li><a class="menu__item" href="#about">About</a></li>
-            <li><a class="menu__item" href="#skill">Skills</a></li>
-            <li><a class="menu__item" href="#projects">Projects</a></li>
-            <li><a class="menu__item" href="#contactme">Contact Me</a></li>
-          </ul>
+          <div class="menu__box nav-wrapper">
+            <div><a class="menu__item" href="#home">Home</a></div>
+            <div><a class="menu__item" href="#about">About</a></div>
+            <div><a class="menu__item" href="#projects">Projects</a></div>
+            <div><a class="menu__item" href="#skill">Skills</a></div>
+            <div><a class="menu__item" href="#skill">Contact Me</a></div>
+          </div>
         </div>
 
         <div class="logo-container" id="home">
@@ -47,7 +47,7 @@
           <div><a href="#about">About</a></div>
           <div><a href="#projects">Projects</a></div>
           <div><a href="#skill">Skills</a></div>
-          <div><a href="#contactme">Contact Me</a></div>
+          <div><a href="#contactMe">Contact Me</a></div>
         </div>
 
       </div>
@@ -300,8 +300,8 @@
 
     </div>
 
-    <div class="contactus-form-container" id="contactme">
-      <div class="container">
+    <div class="contactus-form-container" id="contactMe">
+      <div class="container" >
 
         <h1 class="contactus-heading">Contact me</h1>
 
@@ -312,15 +312,15 @@
         <div class="contactus-form-container">
           <form class="form" return="false">
             <div class="formfield-container">
-              <input class="formfield" type="text" name="name" id="Name" placeholder="Enter your name"
+              <input class="formfield" type="text" name="name" id="Name" placeholder="Enter your name" autocomplete="off"
                 required="true" />
 
               <input class="formfield" type="email" name="email" id="Email" placeholder="Enter your email address"
-                required="true" />
+                required="true" autocomplete="off" />
 
-              <input class="formfield" type="text" name="subject" id="Subject" placeholder="Enter your subject" />
+              <input class="formfield" type="text" name="subject" id="Subject" placeholder="Enter your subject" autocomplete="off"/>
 
-              <textarea name="message" id="Message" cols="30" rows="10" class="formfield formfield-textarea"
+              <textarea name="message" id="Message" cols="30" rows="10" class="formfield formfield-textarea" 
                 placeholder="Enter your message"></textarea>
             </div>
 
@@ -334,7 +334,6 @@
 
 
         </div>
-
 
       </div>
     </div>
@@ -358,7 +357,7 @@
               <a href="#skill">Skills</a>
             </div>
             <div>
-              <a href="#contactme">Contact Me</a>
+              <a href="#contactMe">Contact Me</a>
             </div>
           </div>
 
